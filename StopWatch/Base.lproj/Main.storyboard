@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O9-mt-enT">
+                                <rect key="frame" x="207" y="257" width="186" height="86"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="72"/>
+                                <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-dR-s6h">
+                                <rect key="frame" x="160" y="78" width="280" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Y2U-pn-Qrm"/>
+                                    <constraint firstAttribute="width" constant="280" id="zsh-IL-ZTi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-F4-Agc">
+                                <rect key="frame" x="236" y="395" width="128" height="128"/>
+                                <state key="normal" image="start"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VnO-E2-35r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KTk-dR-s6h" firstAttribute="centerX" secondItem="4O9-mt-enT" secondAttribute="centerX" id="BWf-zI-n4l"/>
+                            <constraint firstItem="xJE-F4-Agc" firstAttribute="centerX" secondItem="4O9-mt-enT" secondAttribute="centerX" id="MlK-La-Znh"/>
+                            <constraint firstItem="KTk-dR-s6h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="eJS-cJ-yoQ"/>
+                            <constraint firstItem="4O9-mt-enT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eaN-dG-jQQ"/>
+                            <constraint firstItem="xJE-F4-Agc" firstAttribute="top" secondItem="4O9-mt-enT" secondAttribute="bottom" constant="52" id="udM-xd-T8G"/>
+                            <constraint firstItem="4O9-mt-enT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ySa-ZY-q1J"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textTime" destination="4O9-mt-enT" id="XfE-9g-9Cs"/>
+                        <outlet property="toggleButton" destination="xJE-F4-Agc" id="haC-5f-A8y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="447" y="319"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="485" height="425"/>
+        <image name="start" width="128" height="128"/>
+    </resources>
 </document>

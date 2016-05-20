@@ -14,6 +14,9 @@
 		F42EE48A1CDE30F000131735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42EE4881CDE30F000131735 /* LaunchScreen.storyboard */; };
 		F42EE4951CDE30F100131735 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EE4941CDE30F100131735 /* StopWatchTests.swift */; };
 		F42EE4A01CDE30F100131735 /* StopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EE49F1CDE30F100131735 /* StopWatchUITests.swift */; };
+		F42EE4B01CDE70BE00131735 /* FFF_Tusj.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42EE4AF1CDE70BE00131735 /* FFF_Tusj.ttf */; };
+		F42EE4B21CDE90C100131735 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EE4B11CDE90C100131735 /* Timer.swift */; };
+		F42EE4B41CDE963F00131735 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EE4B31CDE963F00131735 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		F42EE49B1CDE30F100131735 /* StopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42EE49F1CDE30F100131735 /* StopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchUITests.swift; sourceTree = "<group>"; };
 		F42EE4A11CDE30F100131735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42EE4AF1CDE70BE00131735 /* FFF_Tusj.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FFF_Tusj.ttf; sourceTree = "<group>"; };
+		F42EE4B11CDE90C100131735 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		F42EE4B31CDE963F00131735 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		F42EE47E1CDE30F000131735 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				F42EE4AD1CDE702B00131735 /* Resources */,
 				F42EE47F1CDE30F000131735 /* AppDelegate.swift */,
 				F42EE4811CDE30F000131735 /* ViewController.swift */,
 				F42EE4831CDE30F000131735 /* Main.storyboard */,
 				F42EE4861CDE30F000131735 /* Assets.xcassets */,
 				F42EE4881CDE30F000131735 /* LaunchScreen.storyboard */,
 				F42EE48B1CDE30F000131735 /* Info.plist */,
+				F42EE4B11CDE90C100131735 /* Timer.swift */,
+				F42EE4B31CDE963F00131735 /* Utils.swift */,
 			);
 			path = StopWatch;
 			sourceTree = "<group>";
@@ -123,6 +132,22 @@
 				F42EE4A11CDE30F100131735 /* Info.plist */,
 			);
 			path = StopWatchUITests;
+			sourceTree = "<group>";
+		};
+		F42EE4AD1CDE702B00131735 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F42EE4AE1CDE703500131735 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F42EE4AE1CDE703500131735 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F42EE4AF1CDE70BE00131735 /* FFF_Tusj.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +257,7 @@
 				F42EE48A1CDE30F000131735 /* LaunchScreen.storyboard in Resources */,
 				F42EE4871CDE30F000131735 /* Assets.xcassets in Resources */,
 				F42EE4851CDE30F000131735 /* Main.storyboard in Resources */,
+				F42EE4B01CDE70BE00131735 /* FFF_Tusj.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42EE4B21CDE90C100131735 /* Timer.swift in Sources */,
 				F42EE4821CDE30F000131735 /* ViewController.swift in Sources */,
 				F42EE4801CDE30F000131735 /* AppDelegate.swift in Sources */,
+				F42EE4B41CDE963F00131735 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
